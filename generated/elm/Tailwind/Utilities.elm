@@ -30081,6 +30081,11 @@ prose =
                 ]
             ]
         , Css.Global.descendants
+            [ Css.Global.selector ":where(th, td):not(:where([class~=\"not-prose\"], [class~=\"not-prose\"] *))"
+                [ Css.property "text-align" "start"
+                ]
+            ]
+        , Css.Global.descendants
             [ Css.Global.selector ":where(tfoot td):not(:where([class~=\"not-prose\"], [class~=\"not-prose\"] *))"
                 [ Css.property "vertical-align" "top"
                 ]
@@ -30127,7 +30132,6 @@ prose =
             [ Css.Global.selector ":where(table):not(:where([class~=\"not-prose\"], [class~=\"not-prose\"] *))"
                 [ Css.property "width" "100%"
                 , Css.property "table-layout" "auto"
-                , Css.property "text-align" "start"
                 , Css.property "margin-top" "2em"
                 , Css.property "margin-bottom" "2em"
                 , Css.property "font-size" "0.875em"
